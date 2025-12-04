@@ -154,7 +154,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="include\GameStorage.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="RandomGenerator.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
@@ -232,10 +232,13 @@
       <SDLCheck>true</SDLCheck>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
+    <ClCompile Include="RoundStorage.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="include\GameParams.h" />
+    <ClInclude Include="include\GameStorage.h" />
     <ClInclude Include="include\RandomGenerator.h" />
+    <ClInclude Include="include\RoundStorage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

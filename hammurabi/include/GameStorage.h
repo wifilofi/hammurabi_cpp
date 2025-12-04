@@ -22,9 +22,3 @@ public:
     {
     }
 };
-
-struct GameParams
-{
-public:
-    int max_round = 10;
-};
