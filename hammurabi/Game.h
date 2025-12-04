@@ -1,0 +1,30 @@
+﻿#pragma once
+
+
+struct GameStorage
+{
+public:
+    int cur_people = 100;
+    int cur_wheat = 2800;
+    int cur_land = 1000;
+
+    int cur_round = 1;
+    int needed_wheat = 0;
+
+    GameStorage() = default;
+
+    GameStorage(int cur_people, int cur_wheat, int cur_land, int round, int needed_wheat)
+        : cur_people(cur_people),
+          cur_wheat(cur_wheat),
+          cur_land(cur_land),
+          cur_round(round),
+          needed_wheat(needed_wheat)
+    {
+    }
+};
+
+struct GameParams
+{
+public:
+    int max_round = 10;
+};
