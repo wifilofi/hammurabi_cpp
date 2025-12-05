@@ -11,6 +11,8 @@ public:
 
     int cur_round = 1;
     int needed_wheat = 0;
+    int total_deaths;
+    int total_arrivals;
 
     GameStorage(GameParams& game_params) :
         game_params_(game_params)
