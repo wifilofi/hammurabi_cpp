@@ -2,20 +2,15 @@
 #include "GameStorage.h"
 #include "RandomGenerator.h"
 
-
 struct RoundStorage
 {
-    RoundStorage(const GameParams& params, const GameStorage& game_storage, const RandomGenerator& rng)
-        : params_(params),
-          game_storage_(game_storage),
-          rng_(rng)
-    {
-    }
+    explicit RoundStorage(const GameParams& params, const GameStorage& game_storage, const RandomGenerator& rng);
 
 private:
-    GameParams params_;
+    GameParams game_params_;
     GameStorage game_storage_;
     RandomGenerator rng_;
+
 
 public:
     int people_died;
@@ -24,7 +19,10 @@ public:
     int wheat_collected;
     int wheat_ratted;
 
-    int landPrice;
+    int land_price;
 
-    bool wasPlague = false;
+    bool was_plague = false;
+
+    void processRound();
+    void updateGameStorage();
 };
