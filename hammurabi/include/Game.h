@@ -22,6 +22,6 @@ private:
     GameParams game_params_;
     RandomGenerator rng_;
 
-    void showRoundReport(const RoundStorage& round_storage, const GameStorage& gameStorage);
+    void showRoundReport(const RoundStorage& round_storage);
     
 };

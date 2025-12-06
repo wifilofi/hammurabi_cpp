@@ -15,7 +15,7 @@ RoundStorage::RoundStorage(const GameParams& params,
     SetConsoleCP(CP_UTF8);
 }
 
-void RoundStorage::processRound()
+void RoundStorage::generateRound()
 {
     land_price = rng_.getRandomLandPrice();
 
@@ -132,8 +132,5 @@ void RoundStorage::calculateRoundResults()
     }
 
     // wheat update
-    game_storage_.cur_wheat = game_storage_.cur_wheat
-        - wheat_for_food
-        + wheat_collected
-        - wheat_ratted;
+    game_storage_.cur_wheat = game_storage_.cur_wheat - wheat_for_food + wheat_collected - wheat_ratted;
 }

@@ -5,6 +5,7 @@
 struct GameStorage
 {
 public:
+    //TODO: init via params
     int cur_people = 100;
     int cur_wheat = 2800;
     int cur_land = 1000;

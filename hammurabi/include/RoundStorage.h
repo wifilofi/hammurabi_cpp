@@ -19,7 +19,7 @@ public:
     int wheat_per_land = 0;
     int land_after_trade = 0;
 
-    void processRound();
+    void generateRound();
     bool validatePlayerInput(int wheat_to_buy, int wheat_to_sell, int wheat_for_food, int wheat_to_plant);
     void calculateRoundResults();
 
