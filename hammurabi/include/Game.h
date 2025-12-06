@@ -21,7 +21,7 @@ private:
     GameStorage game_storage_;
     GameParams game_params_;
     RandomGenerator rng_;
+    RoundStorage prev_round_storage_{game_params_, game_storage_, rng_};
 
     void showRoundReport(const RoundStorage& round_storage);
-    
 };

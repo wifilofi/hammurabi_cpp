@@ -14,6 +14,7 @@ public:
     int needed_wheat = 0;
     int total_deaths;
     int total_arrivals;
+    int avg_death_percentage;
 
     GameStorage(GameParams& game_params) :
         game_params_(game_params)

@@ -4,20 +4,23 @@
 
 struct RoundStorage
 {
-    explicit RoundStorage(const GameParams& params, const GameStorage& game_storage, const RandomGenerator& rng);
-public:
-    int people_died;
-    int people_arrived;
-
-    int wheat_collected;
-    int wheat_ratted;
+    explicit RoundStorage(const GameParams& params, GameStorage& game_storage, const RandomGenerator& rng);
+    
+    int people_died = 0;
+    int people_arrived = 0;
+    int wheat_collected = 0;
+    int wheat_ratted = 0;
     bool was_plague = false;
     
-    //this round
-    int land_price;
+    int land_price = 0;
     int wheat_after_trade = 0;
     int wheat_per_land = 0;
     int land_after_trade = 0;
+    
+    int wheat_to_buy = 0;
+    int wheat_to_sell = 0;
+    int wheat_for_food = 0;
+    int wheat_to_plant = 0;
 
     void generateRound();
     bool validatePlayerInput(int wheat_to_buy, int wheat_to_sell, int wheat_for_food, int wheat_to_plant);
@@ -25,6 +28,6 @@ public:
 
 private:
     GameParams game_params_;
-    GameStorage game_storage_;
+    GameStorage& game_storage_;
     RandomGenerator rng_;
 };
